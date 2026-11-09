@@ -605,8 +605,263 @@
         color: var(--text);
       }
 
+      /* ========== WIREFRAMES M3 — paleta proprie (slate / indigo / ambra) ========== */
+      .wf-grid {
+        --wf-ink: #0f172a;
+        --wf-muted: #64748b;
+        --wf-bd: #e2e8f0;
+        --wf-soft: #f1f5f9;
+        --wf-primary: #4f46e5;
+        --wf-primary-soft: #eef2ff;
+        --wf-accent: #f59e0b;
+        --wf-teal: #0d9488;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
+      }
+      .wf-card {
+        color-scheme: light;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        padding: 20px;
+        background: #ffffff;
+        border: 1px solid var(--wf-bd);
+        border-radius: 14px;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+        color: var(--wf-ink);
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      }
+      .wf-card h3 {
+        margin: 0;
+        font-size: 1.05rem;
+        font-weight: 800;
+        letter-spacing: -0.01em;
+        color: var(--wf-ink);
+      }
+      .wf-meta {
+        display: inline-block;
+        margin-bottom: 8px;
+        padding: 3px 9px;
+        border-radius: 999px;
+        background: var(--wf-primary-soft);
+        color: var(--wf-primary);
+        font-size: 0.64rem;
+        font-weight: 800;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+      .wf-desc {
+        margin: 0;
+        font-size: 0.84rem;
+        line-height: 1.6;
+        color: #475569;
+      }
+      .wf-flow {
+        list-style: none;
+        margin: 0;
+        padding: 12px 0 0;
+        border-top: 1px solid var(--wf-bd);
+        display: grid;
+        gap: 7px;
+        font-size: 0.78rem;
+        color: var(--wf-muted);
+      }
+      .wf-flow li::before {
+        content: "→";
+        margin-right: 7px;
+        color: var(--wf-accent);
+        font-weight: 800;
+      }
+      .wf-flow b {
+        color: var(--wf-ink);
+        font-weight: 700;
+      }
+      /* Cadrul schitei: mock de browser */
+      .wf {
+        border: 1px solid var(--wf-bd);
+        border-radius: 10px;
+        background: #ffffff;
+        overflow: hidden;
+      }
+      .wf-chrome {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        padding: 8px 10px;
+        background: linear-gradient(90deg, #1e293b, #334155);
+      }
+      .wf-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #ef4444;
+      }
+      .wf-dot:nth-of-type(2) {
+        background: #f59e0b;
+      }
+      .wf-dot:nth-of-type(3) {
+        background: #22c55e;
+      }
+      .wf-url {
+        flex: 1;
+        height: 14px;
+        margin-left: 8px;
+        border-radius: 7px;
+        background: rgba(255, 255, 255, 0.16);
+      }
+      .wf-screen {
+        padding: 14px;
+        display: grid;
+        gap: 12px;
+        background: #ffffff;
+      }
+      .wf-nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid var(--wf-bd);
+      }
+      .wf-row {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      .wf-split {
+        display: flex;
+        gap: 10px;
+        align-items: stretch;
+      }
+      .wf-side {
+        width: 32%;
+        display: grid;
+        gap: 7px;
+        align-content: start;
+        padding-right: 10px;
+        border-right: 1px solid var(--wf-bd);
+      }
+      .wf-main {
+        flex: 1;
+        display: grid;
+        gap: 8px;
+        align-content: start;
+      }
+      .wf-box {
+        border: 1px solid var(--wf-bd);
+        border-radius: 8px;
+        padding: 10px;
+        display: grid;
+        gap: 7px;
+        align-content: start;
+        background: #f8fafc;
+      }
+      .wf-tiles {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 8px;
+      }
+      .wf-tiles.two {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .wf-ph {
+        flex: 1;
+        min-height: 62px;
+        border: 1px dashed #c7d2fe;
+        border-radius: 8px;
+        display: grid;
+        place-items: center;
+        text-align: center;
+        padding: 6px;
+        font-size: 0.66rem;
+        color: var(--wf-primary);
+        background: repeating-linear-gradient(
+          45deg,
+          #ffffff,
+          #ffffff 6px,
+          var(--wf-primary-soft) 6px,
+          var(--wf-primary-soft) 12px
+        );
+      }
+      .wf-line {
+        height: 7px;
+        border-radius: 4px;
+        background: #e2e8f0;
+        width: 100%;
+      }
+      .wf-line.sm {
+        width: 42%;
+      }
+      .wf-line.md {
+        width: 72%;
+      }
+      .wf-title {
+        height: 13px;
+        width: 58%;
+        border-radius: 4px;
+        background: linear-gradient(90deg, var(--wf-primary), #818cf8);
+      }
+      .wf-input {
+        height: 20px;
+        border: 1px solid #cbd5e1;
+        border-radius: 6px;
+        background: #ffffff;
+      }
+      .wf-btn {
+        display: inline-grid;
+        place-items: center;
+        padding: 5px 10px;
+        border: 1px solid #cbd5e1;
+        border-radius: 6px;
+        background: #ffffff;
+        font-size: 0.65rem;
+        font-weight: 700;
+        color: #334155;
+        white-space: nowrap;
+      }
+      .wf-btn.primary {
+        background: var(--wf-primary);
+        border-color: var(--wf-primary);
+        color: #ffffff;
+      }
+      .wf-label {
+        font-size: 0.65rem;
+        font-weight: 800;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--wf-ink);
+      }
+      .wf-text {
+        font-size: 0.7rem;
+        color: var(--wf-muted);
+      }
+      .wf-chart {
+        min-height: 58px;
+        display: flex;
+        align-items: flex-end;
+        gap: 7px;
+        padding: 6px;
+        border: 1px solid var(--wf-bd);
+        border-radius: 8px;
+        background: #ffffff;
+      }
+      .wf-chart i {
+        flex: 1;
+        background: var(--wf-primary);
+        border-radius: 3px 3px 0 0;
+      }
+      /* bara alternativa = produsul concurent */
+      .wf-chart i:nth-child(even) {
+        background: var(--wf-accent);
+      }
+
       /* Responsiveness */
       @media (max-width: 900px) {
+        .wf-grid {
+          grid-template-columns: 1fr;
+        }
         .sidebar {
           display: none;
         }
@@ -684,6 +939,22 @@
               <li><a href="#m2-decizie">07. Customer Validation</a></li>
             </ul>
           </div>
+
+          <!-- MILESTONE 3 -->
+          <div>
+            <div class="sidebar-group-title">
+              <span>Milestone 3</span>
+              <span class="sidebar-badge">M3</span>
+            </div>
+            <ul class="sidebar-links">
+              <li><a href="#m3-scop">01. Scop & Livrabile</a></li>
+              <li><a href="#m3-sitemap">02. Arhitectura Aplicației</a></li>
+              <li><a href="#m3-wireframes">03. Wireframes · Companie</a></li>
+              <li><a href="#m3-tester">04. Wireframes · Tester</a></li>
+              <li><a href="#m3-interactiuni">05. Harta Interacțiunilor</a></li>
+              <li><a href="#m3-landing">06. Landing Page</a></li>
+            </ul>
+          </div>
         </div>
       </div>
 
@@ -699,7 +970,8 @@
         <div class="top-nav-title">Proiect Fiki: Platformă B2B de Testare Comparativă</div>
         <div class="top-nav-actions">
           <a class="btn btn-secondary" href="#m1-anchor" style="padding: 6px 12px; font-size: 0.8rem;">M1</a>
-          <a class="btn btn-primary" href="#m2-discovery" style="padding: 6px 12px; font-size: 0.8rem;">M2</a>
+          <a class="btn btn-secondary" href="#m2-discovery" style="padding: 6px 12px; font-size: 0.8rem;">M2</a>
+          <a class="btn btn-primary" href="#m3-wireframe" style="padding: 6px 12px; font-size: 0.8rem;">M3</a>
         </div>
       </header>
 
@@ -716,7 +988,8 @@
             </p>
             <div class="hero-actions">
               <a class="btn btn-secondary" href="#m1-anchor">Navighează la M1</a>
-              <a class="btn btn-primary" href="#m2-discovery">Navighează la M2</a>
+              <a class="btn btn-secondary" href="#m2-discovery">Navighează la M2</a>
+              <a class="btn btn-primary" href="#m3-wireframe">Navighează la M3</a>
             </div>
             <div class="hero-stats">
               <div class="stat">
@@ -1327,6 +1600,744 @@
               </p>
             </div>
 
+          </div>
+        </section>
+
+        <!-- ======================================================== -->
+        <!--                   MILESTONE 3 (M3)                       -->
+        <!-- ======================================================== -->
+        <div id="m3-wireframe" class="container">
+          <div class="milestone-banner">
+            <div>
+              <span class="milestone-tag">MILESTONE 3</span>
+              <strong style="margin-left: 8px;">Wireframe & Landing Page</strong>
+            </div>
+            <span style="font-size: 0.8rem; color: var(--muted); font-weight: 600;">Wireframe (W1–W11) + Landing Page implementat</span>
+          </div>
+        </div>
+
+        <!-- M3.1 SCOP & LIVRABILE -->
+        <section class="section" id="m3-scop">
+          <div class="container">
+            <div class="section-head">
+              <div>
+                <div class="section-num">M3 · ETAPA 1 / SCOP</div>
+                <h2>Scopul wireframe-ului și livrabilele etapei</h2>
+                <p class="lead">Wireframe-ul descrie scheletul aplicației TryBefore: ce conține fiecare ecran, unde se găsesc funcționalitățile și ce se întâmplă la apăsarea fiecărui buton.</p>
+              </div>
+            </div>
+            <div class="grid grid-3">
+              <article class="card">
+                <div class="icon-box">📐</div>
+                <h3>Ce reprezintă</h3>
+                <p>Structura low-fidelity a produsului, fără culori de brand, tipografie finală sau imagini reale. Accentul este pe ierarhia informației și pe fluxul dintre ecrane, nu pe design.</p>
+              </article>
+              <article class="card">
+                <div class="icon-box">🧭</div>
+                <h3>Ce acoperă</h3>
+                <p>Două aplicații complementare: platforma web B2B folosită de companiile client și aplicația de tester folosită de consumatorii care evaluează mostrele, plus panoul operațional intern.</p>
+              </article>
+              <article class="card">
+                <div class="icon-box">🛠️</div>
+                <h3>Instrumente</h3>
+                <p>Schițele de mai jos sunt realizate direct în HTML/CSS (low-fidelity), pentru a putea fi versionate în repo alături de documentație. Alternativele evaluate au fost Balsamiq și Vercel v0.</p>
+              </article>
+            </div>
+            <div class="callout">
+              <strong>Status livrabile M3:</strong>
+              <p>Wireframe complet (11 ecrane + harta interacțiunilor) — realizat. Landing page funcțional pentru validarea cererii — pasul următor, construit pornind de la ecranul W1 din acest wireframe.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- M3.2 ARHITECTURA APLICATIEI -->
+        <section class="section" id="m3-sitemap">
+          <div class="container">
+            <div class="section-head">
+              <div>
+                <div class="section-num">M3 · ETAPA 2 / ARHITECTURĂ</div>
+                <h2>Arhitectura informației</h2>
+                <p class="lead">Cele trei zone funcționale ale produsului și traseul principal parcurs de un client B2B.</p>
+              </div>
+            </div>
+            <div class="grid grid-3">
+              <article class="card">
+                <div class="icon-box">A</div>
+                <h3>Zona publică</h3>
+                <ul class="checklist">
+                  <li>Landing page (W1)</li>
+                  <li>Cum funcționează / Prețuri</li>
+                  <li>Raport demo</li>
+                  <li>Creare cont & autentificare (W2)</li>
+                </ul>
+              </article>
+              <article class="card">
+                <div class="icon-box">B</div>
+                <h3>Zona companiei (B2B)</h3>
+                <ul class="checklist">
+                  <li>Dashboard campanii (W3)</li>
+                  <li>Wizard campanie nouă (W4)</li>
+                  <li>Monitorizare testare (W5)</li>
+                  <li>Raport comparativ (W6)</li>
+                </ul>
+              </article>
+              <article class="card">
+                <div class="icon-box">C</div>
+                <h3>Zona testerilor & operațional</h3>
+                <ul class="checklist">
+                  <li>Înscriere și profil tester (W7)</li>
+                  <li>Invitație & confirmare kit (W8)</li>
+                  <li>Formular de evaluare (W9)</li>
+                  <li>Recompense și istoric (W10)</li>
+                  <li>Panou operațional intern (W11)</li>
+                </ul>
+              </article>
+            </div>
+
+            <h3 style="margin-top: 28px;">Traseul principal al clientului</h3>
+            <div class="flow">
+              <div class="flow-step">
+                <strong>Landing page</strong>
+                <p>Vede propunerea de valoare și cere un test.</p>
+              </div>
+              <div class="flow-step">
+                <strong>Configurare campanie</strong>
+                <p>Alege produsul propriu, concurentul și segmentul țintă.</p>
+              </div>
+              <div class="flow-step">
+                <strong>Testare</strong>
+                <p>Mostrele ajung la testeri, care completează evaluarea.</p>
+              </div>
+              <div class="flow-step">
+                <strong>Raport</strong>
+                <p>Primește scorurile comparative și concluziile de decizie.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- M3.3 WIREFRAMES COMPANIE -->
+        <section class="section" id="m3-wireframes">
+          <div class="container">
+            <div class="section-head">
+              <div>
+                <div class="section-num">M3 · ETAPA 3 / WIREFRAMES</div>
+                <h2>Wireframes — platforma companiei</h2>
+                <p class="lead">Ecranele parcurse de clientul B2B, de la prima vizită pe site până la raportul final.</p>
+              </div>
+            </div>
+
+            <div class="wf-grid">
+              <!-- W1 LANDING -->
+              <article class="wf-card">
+                <div>
+                  <div class="wf-meta">W1 · Public</div>
+                  <h3>Landing Page</h3>
+                </div>
+                <div class="wf">
+                  <div class="wf-chrome"><span class="wf-dot"></span><span class="wf-dot"></span><span class="wf-dot"></span><span class="wf-url"></span></div>
+                  <div class="wf-screen">
+                    <div class="wf-nav">
+                      <span class="wf-label">◼ TryBefore</span>
+                      <div class="wf-row">
+                        <span class="wf-text">Cum funcționează</span>
+                        <span class="wf-text">Prețuri</span>
+                        <span class="wf-btn primary">Cere ofertă</span>
+                      </div>
+                    </div>
+                    <div class="wf-split">
+                      <div class="wf-main">
+                        <div class="wf-title"></div>
+                        <div class="wf-line"></div>
+                        <div class="wf-line md"></div>
+                        <div class="wf-row">
+                          <span class="wf-btn primary">Începe un test</span>
+                          <span class="wf-btn">Vezi raport demo</span>
+                        </div>
+                      </div>
+                      <div class="wf-ph">Vizual: produs A vs produs B</div>
+                    </div>
+                    <div class="wf-tiles">
+                      <div class="wf-box"><span class="wf-label">1. Trimiți</span><span class="wf-line"></span><span class="wf-line sm"></span></div>
+                      <div class="wf-box"><span class="wf-label">2. Testăm</span><span class="wf-line"></span><span class="wf-line sm"></span></div>
+                      <div class="wf-box"><span class="wf-label">3. Raport</span><span class="wf-line"></span><span class="wf-line sm"></span></div>
+                    </div>
+                    <div class="wf-box">
+                      <span class="wf-label">Formular lead: nume, companie, email</span>
+                      <div class="wf-input"></div>
+                      <div class="wf-row"><span class="wf-btn primary">Trimite solicitarea</span></div>
+                    </div>
+                  </div>
+                </div>
+                <p class="wf-desc">Prima pagină publică: propunere de valoare, mecanismul în 3 pași, dovezi sociale și formularul de captare a cererii.</p>
+                <ul class="wf-flow">
+                  <li><b>„Începe un test" / „Cere ofertă"</b> → W2 (creare cont)</li>
+                  <li><b>„Vezi raport demo"</b> → versiune anonimizată a W6</li>
+                  <li><b>„Trimite solicitarea"</b> → confirmare pe pagină + notificare internă</li>
+                </ul>
+              </article>
+
+              <!-- W2 CONT -->
+              <article class="wf-card">
+                <div>
+                  <div class="wf-meta">W2 · Public</div>
+                  <h3>Creare cont / Autentificare</h3>
+                </div>
+                <div class="wf">
+                  <div class="wf-chrome"><span class="wf-dot"></span><span class="wf-dot"></span><span class="wf-dot"></span><span class="wf-url"></span></div>
+                  <div class="wf-screen">
+                    <div class="wf-nav">
+                      <span class="wf-label">◼ TryBefore</span>
+                      <span class="wf-text">Ai deja cont? Autentifică-te</span>
+                    </div>
+                    <div class="wf-split">
+                      <div class="wf-main">
+                        <div class="wf-title"></div>
+                        <span class="wf-label">Denumire companie</span>
+                        <div class="wf-input"></div>
+                        <span class="wf-label">Email de business</span>
+                        <div class="wf-input"></div>
+                        <span class="wf-label">Parolă</span>
+                        <div class="wf-input"></div>
+                        <div class="wf-row">
+                          <span class="wf-btn primary">Creează contul</span>
+                          <span class="wf-btn">Anulează</span>
+                        </div>
+                      </div>
+                      <div class="wf-box" style="width: 38%;">
+                        <span class="wf-label">Ce primești</span>
+                        <div class="wf-line"></div>
+                        <div class="wf-line md"></div>
+                        <div class="wf-line"></div>
+                        <div class="wf-line sm"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <p class="wf-desc">Cont de companie cu date minime. Validarea emailului de business reduce înscrierile nerelevante.</p>
+                <ul class="wf-flow">
+                  <li><b>„Creează contul"</b> → W3 (dashboard gol, cu stare „fără campanii")</li>
+                  <li><b>„Autentifică-te"</b> → W3 (dashboard cu campanii existente)</li>
+                </ul>
+              </article>
+
+              <!-- W3 DASHBOARD -->
+              <article class="wf-card">
+                <div>
+                  <div class="wf-meta">W3 · Cont companie</div>
+                  <h3>Dashboard campanii</h3>
+                </div>
+                <div class="wf">
+                  <div class="wf-chrome"><span class="wf-dot"></span><span class="wf-dot"></span><span class="wf-dot"></span><span class="wf-url"></span></div>
+                  <div class="wf-screen">
+                    <div class="wf-nav">
+                      <span class="wf-label">◼ TryBefore</span>
+                      <div class="wf-row"><span class="wf-btn primary">+ Campanie nouă</span><span class="wf-text">Cont ▾</span></div>
+                    </div>
+                    <div class="wf-split">
+                      <div class="wf-side">
+                        <span class="wf-label">Campanii</span>
+                        <span class="wf-text">Rapoarte</span>
+                        <span class="wf-text">Produse</span>
+                        <span class="wf-text">Facturare</span>
+                        <span class="wf-text">Setări</span>
+                      </div>
+                      <div class="wf-main">
+                        <div class="wf-tiles">
+                          <div class="wf-box"><span class="wf-label">Active</span><span class="wf-title" style="width: 30%;"></span></div>
+                          <div class="wf-box"><span class="wf-label">Testeri</span><span class="wf-title" style="width: 30%;"></span></div>
+                          <div class="wf-box"><span class="wf-label">Rapoarte</span><span class="wf-title" style="width: 30%;"></span></div>
+                        </div>
+                        <div class="wf-box">
+                          <div class="wf-row" style="justify-content: space-between;"><span class="wf-label">Campanie · Status · Progres</span><span class="wf-text">Filtre ▾</span></div>
+                          <div class="wf-row" style="justify-content: space-between;"><span class="wf-line md"></span><span class="wf-btn">Vezi raport</span></div>
+                          <div class="wf-row" style="justify-content: space-between;"><span class="wf-line md"></span><span class="wf-btn">Urmărește</span></div>
+                          <div class="wf-row" style="justify-content: space-between;"><span class="wf-line md"></span><span class="wf-btn">Vezi raport</span></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <p class="wf-desc">Ecranul central după autentificare: indicatori sintetici și lista campaniilor cu statusul fiecăreia (draft, în testare, finalizată).</p>
+                <ul class="wf-flow">
+                  <li><b>„+ Campanie nouă"</b> → W4 (wizard, pasul 1)</li>
+                  <li><b>„Urmărește"</b> → W5 (monitorizare testare)</li>
+                  <li><b>„Vezi raport"</b> → W6 (raport comparativ)</li>
+                </ul>
+              </article>
+
+              <!-- W4 WIZARD -->
+              <article class="wf-card">
+                <div>
+                  <div class="wf-meta">W4 · Cont companie</div>
+                  <h3>Wizard — campanie nouă</h3>
+                </div>
+                <div class="wf">
+                  <div class="wf-chrome"><span class="wf-dot"></span><span class="wf-dot"></span><span class="wf-dot"></span><span class="wf-url"></span></div>
+                  <div class="wf-screen">
+                    <div class="wf-nav">
+                      <span class="wf-label">Pas 2 din 4 · Produse comparate</span>
+                      <span class="wf-text">Salvează ca draft</span>
+                    </div>
+                    <div class="wf-row">
+                      <span class="wf-btn primary">1 Obiectiv</span>
+                      <span class="wf-btn primary">2 Produse</span>
+                      <span class="wf-btn">3 Segment</span>
+                      <span class="wf-btn">4 Criterii</span>
+                    </div>
+                    <div class="wf-tiles two">
+                      <div class="wf-box">
+                        <span class="wf-label">Produsul tău</span>
+                        <div class="wf-ph">Încarcă fotografie</div>
+                        <div class="wf-input"></div>
+                      </div>
+                      <div class="wf-box">
+                        <span class="wf-label">Produs concurent</span>
+                        <div class="wf-ph">Încarcă fotografie</div>
+                        <div class="wf-input"></div>
+                      </div>
+                    </div>
+                    <div class="wf-box">
+                      <span class="wf-label">Număr de mostre trimise</span>
+                      <div class="wf-input"></div>
+                    </div>
+                    <div class="wf-row" style="justify-content: space-between;">
+                      <span class="wf-btn">← Înapoi</span>
+                      <span class="wf-btn primary">Continuă →</span>
+                    </div>
+                  </div>
+                </div>
+                <p class="wf-desc">Configurare în 4 pași: obiectivul testului, cele două produse comparate, segmentul de testeri și criteriile de evaluare.</p>
+                <ul class="wf-flow">
+                  <li><b>„Continuă"</b> → pasul următor; la pasul 4 → ecran de sumar și plată</li>
+                  <li><b>„Înapoi"</b> → pasul anterior, cu datele păstrate</li>
+                  <li><b>„Salvează ca draft"</b> → W3, campanie cu status „draft"</li>
+                </ul>
+              </article>
+
+              <!-- W5 MONITORIZARE -->
+              <article class="wf-card">
+                <div>
+                  <div class="wf-meta">W5 · Cont companie</div>
+                  <h3>Monitorizare testare</h3>
+                </div>
+                <div class="wf">
+                  <div class="wf-chrome"><span class="wf-dot"></span><span class="wf-dot"></span><span class="wf-dot"></span><span class="wf-url"></span></div>
+                  <div class="wf-screen">
+                    <div class="wf-nav">
+                      <span class="wf-label">Campania #12 · În testare</span>
+                      <span class="wf-text">Contactează echipa</span>
+                    </div>
+                    <div class="wf-box">
+                      <span class="wf-label">Progres general</span>
+                      <div class="wf-line"></div>
+                      <span class="wf-text">Mostre livrate / evaluări finalizate</span>
+                    </div>
+                    <div class="wf-tiles">
+                      <div class="wf-box"><span class="wf-label">Kituri expediate</span><span class="wf-title" style="width: 40%;"></span></div>
+                      <div class="wf-box"><span class="wf-label">Evaluări primite</span><span class="wf-title" style="width: 40%;"></span></div>
+                      <div class="wf-box"><span class="wf-label">Zile rămase</span><span class="wf-title" style="width: 40%;"></span></div>
+                    </div>
+                    <div class="wf-box">
+                      <span class="wf-label">Jurnal logistic</span>
+                      <div class="wf-line"></div>
+                      <div class="wf-line md"></div>
+                      <div class="wf-line sm"></div>
+                    </div>
+                  </div>
+                </div>
+                <p class="wf-desc">Transparență pe durata testării: stadiul livrărilor, câte evaluări au fost completate și estimarea datei de livrare a raportului.</p>
+                <ul class="wf-flow">
+                  <li><b>„Contactează echipa"</b> → formular de mesaj către operațional (W11)</li>
+                  <li><b>La 100% evaluări</b> → raportul devine disponibil și butonul duce la W6</li>
+                </ul>
+              </article>
+
+              <!-- W6 RAPORT -->
+              <article class="wf-card">
+                <div>
+                  <div class="wf-meta">W6 · Cont companie</div>
+                  <h3>Raport comparativ</h3>
+                </div>
+                <div class="wf">
+                  <div class="wf-chrome"><span class="wf-dot"></span><span class="wf-dot"></span><span class="wf-dot"></span><span class="wf-url"></span></div>
+                  <div class="wf-screen">
+                    <div class="wf-nav">
+                      <span class="wf-label">Raport · Produs A vs Produs B</span>
+                      <div class="wf-row"><span class="wf-btn">Export PDF</span><span class="wf-btn">Export CSV</span></div>
+                    </div>
+                    <div class="wf-tiles two">
+                      <div class="wf-box"><span class="wf-label">Rată de preferință</span><span class="wf-title" style="width: 45%;"></span></div>
+                      <div class="wf-box"><span class="wf-label">Scor general</span><span class="wf-title" style="width: 45%;"></span></div>
+                    </div>
+                    <div class="wf-box">
+                      <span class="wf-label">Scoruri pe criterii (calitate, ergonomie, preț perceput)</span>
+                      <div class="wf-chart">
+                        <i style="height: 70%"></i><i style="height: 45%"></i><i style="height: 85%"></i><i style="height: 55%"></i><i style="height: 65%"></i><i style="height: 35%"></i>
+                      </div>
+                    </div>
+                    <div class="wf-box">
+                      <span class="wf-label">Concluzii calitative & recomandări</span>
+                      <div class="wf-line"></div>
+                      <div class="wf-line md"></div>
+                      <div class="wf-line sm"></div>
+                    </div>
+                  </div>
+                </div>
+                <p class="wf-desc">Livrabilul final: indicatori comparativi, grafic pe criterii, citate relevante din feedback-ul testerilor și recomandări de acțiune.</p>
+                <ul class="wf-flow">
+                  <li><b>„Export PDF / CSV"</b> → descărcare fișier</li>
+                  <li><b>Click pe un criteriu</b> → detaliu cu distribuția răspunsurilor și comentariile aferente</li>
+                  <li><b>„Repetă testul"</b> → W4 precompletat cu aceleași setări</li>
+                </ul>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- M3.4 WIREFRAMES TESTER -->
+        <section class="section" id="m3-tester">
+          <div class="container">
+            <div class="section-head">
+              <div>
+                <div class="section-num">M3 · ETAPA 4 / TESTERI</div>
+                <h2>Wireframes — aplicația testerului și panoul intern</h2>
+                <p class="lead">Partea care asigură calitatea datelor: recrutarea testerilor, confirmarea primirii kitului, evaluarea comparativă și coordonarea logistică.</p>
+              </div>
+            </div>
+
+            <div class="wf-grid">
+              <!-- W7 INSCRIERE TESTER -->
+              <article class="wf-card">
+                <div>
+                  <div class="wf-meta">W7 · Tester (mobil)</div>
+                  <h3>Înscriere & profil tester</h3>
+                </div>
+                <div class="wf">
+                  <div class="wf-chrome"><span class="wf-dot"></span><span class="wf-dot"></span><span class="wf-dot"></span><span class="wf-url"></span></div>
+                  <div class="wf-screen">
+                    <div class="wf-title"></div>
+                    <span class="wf-text">Devino tester și primești produse acasă</span>
+                    <div class="wf-box">
+                      <span class="wf-label">Vârstă / Oraș / Ocupație</span>
+                      <div class="wf-input"></div>
+                      <span class="wf-label">Categorii de interes</span>
+                      <div class="wf-row">
+                        <span class="wf-btn">Cosmetice</span><span class="wf-btn">Alimente</span><span class="wf-btn">Electro</span>
+                      </div>
+                      <span class="wf-label">Adresă de livrare</span>
+                      <div class="wf-input"></div>
+                    </div>
+                    <div class="wf-row"><span class="wf-btn primary">Trimite aplicația</span></div>
+                  </div>
+                </div>
+                <p class="wf-desc">Profilul demografic colectat aici permite selectarea unui eșantion relevant pentru publicul-țintă al fiecărei campanii.</p>
+                <ul class="wf-flow">
+                  <li><b>„Trimite aplicația"</b> → ecran de așteptare validare + intrare în baza de testeri</li>
+                  <li><b>Potrivire cu o campanie</b> → notificare și ecranul W8</li>
+                </ul>
+              </article>
+
+              <!-- W8 INVITATIE -->
+              <article class="wf-card">
+                <div>
+                  <div class="wf-meta">W8 · Tester (mobil)</div>
+                  <h3>Invitație & confirmare kit</h3>
+                </div>
+                <div class="wf">
+                  <div class="wf-chrome"><span class="wf-dot"></span><span class="wf-dot"></span><span class="wf-dot"></span><span class="wf-url"></span></div>
+                  <div class="wf-screen">
+                    <div class="wf-box">
+                      <span class="wf-label">Invitație test · Categoria X</span>
+                      <div class="wf-line"></div>
+                      <div class="wf-line md"></div>
+                      <div class="wf-row"><span class="wf-btn primary">Accept</span><span class="wf-btn">Refuz</span></div>
+                    </div>
+                    <div class="wf-box">
+                      <span class="wf-label">Stadiul kitului</span>
+                      <div class="wf-row"><span class="wf-btn">Expediat</span><span class="wf-btn">În curs</span><span class="wf-btn primary">Livrat</span></div>
+                      <div class="wf-row"><span class="wf-btn primary">Confirm primirea</span></div>
+                    </div>
+                    <div class="wf-box">
+                      <span class="wf-label">Instrucțiuni de testare</span>
+                      <div class="wf-line"></div>
+                      <div class="wf-line sm"></div>
+                    </div>
+                  </div>
+                </div>
+                <p class="wf-desc">Testerul acceptă campania, urmărește livrarea kitului cu cele două mostre anonimizate și confirmă primirea.</p>
+                <ul class="wf-flow">
+                  <li><b>„Accept"</b> → rezervare loc în campanie și generare AWB</li>
+                  <li><b>„Confirm primirea"</b> → se deblochează formularul W9</li>
+                  <li><b>„Refuz"</b> → locul este realocat altui tester (vizibil în W11)</li>
+                </ul>
+              </article>
+
+              <!-- W9 FORMULAR EVALUARE -->
+              <article class="wf-card">
+                <div>
+                  <div class="wf-meta">W9 · Tester (mobil)</div>
+                  <h3>Formular de evaluare comparativă</h3>
+                </div>
+                <div class="wf">
+                  <div class="wf-chrome"><span class="wf-dot"></span><span class="wf-dot"></span><span class="wf-dot"></span><span class="wf-url"></span></div>
+                  <div class="wf-screen">
+                    <div class="wf-nav">
+                      <span class="wf-label">Întrebarea 3 din 10</span>
+                      <span class="wf-text">Salvat automat</span>
+                    </div>
+                    <div class="wf-tiles two">
+                      <div class="wf-ph">Mostra A</div>
+                      <div class="wf-ph">Mostra B</div>
+                    </div>
+                    <div class="wf-box">
+                      <span class="wf-label">Cât de plăcută este textura? (1–5)</span>
+                      <div class="wf-row">
+                        <span class="wf-btn">1</span><span class="wf-btn">2</span><span class="wf-btn">3</span><span class="wf-btn primary">4</span><span class="wf-btn">5</span>
+                      </div>
+                      <span class="wf-label">Comentariu liber</span>
+                      <div class="wf-input" style="height: 32px;"></div>
+                    </div>
+                    <div class="wf-row" style="justify-content: space-between;">
+                      <span class="wf-btn">← Înapoi</span>
+                      <span class="wf-btn primary">Următoarea →</span>
+                    </div>
+                  </div>
+                </div>
+                <p class="wf-desc">Evaluare oarbă: mostrele apar etichetate neutru A și B, cu același set standardizat de criterii pentru ambele produse.</p>
+                <ul class="wf-flow">
+                  <li><b>„Următoarea"</b> → întrebarea următoare; la ultima → ecranul de recompensă W10</li>
+                  <li><b>Trimitere finală</b> → răspunsurile alimentează raportul W6</li>
+                </ul>
+              </article>
+
+              <!-- W10 RECOMPENSA -->
+              <article class="wf-card">
+                <div>
+                  <div class="wf-meta">W10 · Tester (mobil)</div>
+                  <h3>Recompensă & istoric</h3>
+                </div>
+                <div class="wf">
+                  <div class="wf-chrome"><span class="wf-dot"></span><span class="wf-dot"></span><span class="wf-dot"></span><span class="wf-url"></span></div>
+                  <div class="wf-screen">
+                    <div class="wf-box">
+                      <span class="wf-label">✓ Evaluare trimisă</span>
+                      <div class="wf-line md"></div>
+                      <div class="wf-row"><span class="wf-btn primary">Revendică recompensa</span></div>
+                    </div>
+                    <div class="wf-box">
+                      <span class="wf-label">Istoric teste</span>
+                      <div class="wf-row" style="justify-content: space-between;"><span class="wf-line sm"></span><span class="wf-text">Finalizat</span></div>
+                      <div class="wf-row" style="justify-content: space-between;"><span class="wf-line sm"></span><span class="wf-text">Finalizat</span></div>
+                    </div>
+                    <div class="wf-box">
+                      <span class="wf-label">Scor de fiabilitate</span>
+                      <div class="wf-line md"></div>
+                    </div>
+                  </div>
+                </div>
+                <p class="wf-desc">Recompensa este eliberată după validarea calității răspunsurilor. Scorul de fiabilitate determină prioritatea la campaniile viitoare.</p>
+                <ul class="wf-flow">
+                  <li><b>„Revendică recompensa"</b> → alegere voucher / transfer</li>
+                  <li><b>Răspunsuri invalidate</b> → scor redus și excludere din eșantionul raportului</li>
+                </ul>
+              </article>
+
+              <!-- W11 PANOU INTERN -->
+              <article class="wf-card" style="grid-column: 1 / -1;">
+                <div>
+                  <div class="wf-meta">W11 · Intern TryBefore</div>
+                  <h3>Panou operațional (logistică & calitate)</h3>
+                </div>
+                <div class="wf">
+                  <div class="wf-chrome"><span class="wf-dot"></span><span class="wf-dot"></span><span class="wf-dot"></span><span class="wf-url"></span></div>
+                  <div class="wf-screen">
+                    <div class="wf-nav">
+                      <span class="wf-label">Operațional · Campanii active</span>
+                      <div class="wf-row"><span class="wf-btn">Generează AWB-uri</span><span class="wf-btn primary">Publică raport</span></div>
+                    </div>
+                    <div class="wf-split">
+                      <div class="wf-side">
+                        <span class="wf-label">Campanii</span>
+                        <span class="wf-text">Testeri</span>
+                        <span class="wf-text">Kituri & AWB</span>
+                        <span class="wf-text">Control calitate</span>
+                        <span class="wf-text">Rapoarte</span>
+                      </div>
+                      <div class="wf-main">
+                        <div class="wf-tiles">
+                          <div class="wf-box"><span class="wf-label">Kituri de expediat</span><span class="wf-title" style="width: 35%;"></span></div>
+                          <div class="wf-box"><span class="wf-label">Evaluări de validat</span><span class="wf-title" style="width: 35%;"></span></div>
+                          <div class="wf-box"><span class="wf-label">Întârzieri</span><span class="wf-title" style="width: 35%;"></span></div>
+                        </div>
+                        <div class="wf-box">
+                          <div class="wf-row" style="justify-content: space-between;"><span class="wf-label">Tester · Campanie · Status · Acțiune</span><span class="wf-text">Caută</span></div>
+                          <div class="wf-row" style="justify-content: space-between;"><span class="wf-line md"></span><span class="wf-btn">Validează</span></div>
+                          <div class="wf-row" style="justify-content: space-between;"><span class="wf-line md"></span><span class="wf-btn">Reatribuie</span></div>
+                          <div class="wf-row" style="justify-content: space-between;"><span class="wf-line md"></span><span class="wf-btn">Respinge</span></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <p class="wf-desc">Ecranul folosit de echipa TryBefore pentru a coordona expedierile, a urmări întârzierile și a valida calitatea evaluărilor înainte de publicarea raportului către client.</p>
+                <ul class="wf-flow">
+                  <li><b>„Validează"</b> → evaluarea intră în calculul raportului</li>
+                  <li><b>„Reatribuie"</b> → locul este oferit altui tester din același segment</li>
+                  <li><b>„Publică raport"</b> → raportul devine vizibil în contul companiei (W6)</li>
+                </ul>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- M3.5 HARTA INTERACTIUNILOR -->
+        <section class="section" id="m3-interactiuni">
+          <div class="container">
+            <div class="section-head">
+              <div>
+                <div class="section-num">M3 · ETAPA 5 / INTERACȚIUNI</div>
+                <h2>Harta interacțiunilor</h2>
+                <p class="lead">Ce se întâmplă concret la apăsarea elementelor principale din wireframe.</p>
+              </div>
+            </div>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th style="width: 14%;">Ecran</th>
+                    <th style="width: 26%;">Element de interfață</th>
+                    <th style="width: 26%;">Acțiune declanșată</th>
+                    <th>Ecran rezultat</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>W1</td>
+                    <td>Buton „Începe un test"</td>
+                    <td>Deschide fluxul de creare cont de companie</td>
+                    <td>W2 — Creare cont</td>
+                  </tr>
+                  <tr>
+                    <td>W1</td>
+                    <td>Formular „Cere ofertă"</td>
+                    <td>Salvează lead-ul și notifică echipa de vânzări</td>
+                    <td>Mesaj de confirmare pe aceeași pagină</td>
+                  </tr>
+                  <tr>
+                    <td>W2</td>
+                    <td>Buton „Creează contul"</td>
+                    <td>Creează organizația și sesiunea de utilizator</td>
+                    <td>W3 — Dashboard (stare goală)</td>
+                  </tr>
+                  <tr>
+                    <td>W3</td>
+                    <td>Buton „+ Campanie nouă"</td>
+                    <td>Pornește wizardul de configurare în 4 pași</td>
+                    <td>W4 — Wizard, pasul 1</td>
+                  </tr>
+                  <tr>
+                    <td>W4</td>
+                    <td>Buton „Continuă"</td>
+                    <td>Validează pasul curent și salvează draftul</td>
+                    <td>Pasul următor / sumar și plată</td>
+                  </tr>
+                  <tr>
+                    <td>W4</td>
+                    <td>Confirmare comandă</td>
+                    <td>Trimite cererea de kituri către operațional</td>
+                    <td>W5 — Monitorizare + sarcini în W11</td>
+                  </tr>
+                  <tr>
+                    <td>W5</td>
+                    <td>Progres 100%</td>
+                    <td>Deblochează raportul după validarea calității</td>
+                    <td>W6 — Raport comparativ</td>
+                  </tr>
+                  <tr>
+                    <td>W6</td>
+                    <td>Buton „Export PDF / CSV"</td>
+                    <td>Generează livrabilul descărcabil</td>
+                    <td>Fișier descărcat</td>
+                  </tr>
+                  <tr>
+                    <td>W8</td>
+                    <td>Buton „Accept"</td>
+                    <td>Rezervă locul testerului și generează AWB</td>
+                    <td>Urmărire kit în W8 + intrare în W11</td>
+                  </tr>
+                  <tr>
+                    <td>W8</td>
+                    <td>Buton „Confirm primirea"</td>
+                    <td>Activează fereastra de evaluare</td>
+                    <td>W9 — Formular de evaluare</td>
+                  </tr>
+                  <tr>
+                    <td>W9</td>
+                    <td>Trimitere finală</td>
+                    <td>Trimite răspunsurile spre validare</td>
+                    <td>W10 — Recompensă</td>
+                  </tr>
+                  <tr>
+                    <td>W11</td>
+                    <td>Buton „Publică raport"</td>
+                    <td>Face raportul vizibil pentru client</td>
+                    <td>W6 în contul companiei</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- M3.6 LANDING PAGE -->
+        <section class="section" id="m3-landing">
+          <div class="container">
+            <div class="section-head">
+              <div>
+                <div class="section-num">M3 · ETAPA 6 / LANDING PAGE</div>
+                <h2>Landing page</h2>
+                <p class="lead">Pagina publică construită pornind de la wireframe-ul W1, pentru validarea cererii reale.</p>
+              </div>
+            </div>
+            <div class="grid grid-2">
+              <article class="card">
+                <div class="icon-box">🧱</div>
+                <h3>Secțiunile implementate</h3>
+                <ul class="checklist">
+                  <li>Hero cu propunerea de valoare și CTA principal</li>
+                  <li>Mecanismul serviciului în 4 pași</li>
+                  <li>Exemplu de raport comparativ (demo anonimizat)</li>
+                  <li>Pachete și intervale de preț validate în M2</li>
+                  <li>Secțiune de recrutare testeri și întrebări frecvente</li>
+                  <li>Formular de solicitare ofertă</li>
+                </ul>
+              </article>
+              <article class="card">
+                <div class="icon-box">📈</div>
+                <h3>Ce măsurăm</h3>
+                <ul class="checklist">
+                  <li>Rata de conversie vizitator → solicitare ofertă</li>
+                  <li>Pachetul de preț cel mai accesat</li>
+                  <li>Secțiunile cu cea mai mare atenție (scroll depth)</li>
+                  <li>Sursele de trafic care aduc companii relevante</li>
+                </ul>
+              </article>
+            </div>
+            <div class="callout">
+              <strong>Status:</strong>
+              <p>Wireframe-ul este finalizat, iar landing page-ul a fost implementat pornind de la ecranul W1: hero cu propunerea de valoare, mecanismul în 4 pași, exemplu de raport comparativ, pachete de preț, secțiune pentru testeri, întrebări frecvente și formular de solicitare ofertă.</p>
+            </div>
+
+            <div style="margin-top: 24px; display: flex; gap: 12px; flex-wrap: wrap; align-items: center;">
+              <a class="btn btn-primary" href="landing_page.html" target="_blank" rel="noopener">
+                Deschide Landing Page-ul TryBefore ↗
+              </a>
+              <span style="font-size: 0.85rem; color: var(--muted);">
+                Pagina publică live, construită după wireframe-ul W1 (fișier: landing_page.html).
+              </span>
+            </div>
+
             <div style="margin-top: 24px; display: flex; gap: 12px; flex-wrap: wrap;">
               <button class="btn btn-primary" onclick="window.print()" type="button">
                 Printează / Salvează Documentul ↗
@@ -1340,7 +2351,7 @@
       <footer class="footer">
         <div class="container footer-inner">
           <div><strong>TryBefore.</strong> Platformă B2B de testare comparativă de produse</div>
-          <div>FIKI: Documentație M1 & M2 · Inginerie Aplicată în Startup-uri · 2026</div>
+          <div>FIKI: Documentație M1, M2 & M3 · Inginerie Aplicată în Startup-uri · 2026</div>
         </div>
       </footer>
     </div>
